@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="image editor, Photofy, JavaScript, CSS, Canvas, 2D, GitHub, JavaScript Project">
+    <meta name="description" content="Image editor made from scratch using Vanilla JavaScript and Canvas.">
+    <meta name="author" content="Keshav, kecav on GitHub">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/slider.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/dom.js" defer></script>
+    <script src="./scripts/canvas-script.js" defer></script>
+    <title>Photofy</title>
+</head>
+
+<body>
+    <header>
+        <div class="name">
+            <!-- <img src="./assets/logo.png" class="logo-img" alt="logo"> -->
+            <h3>PHOTOFY</h3>
+        </div>
+        <p>Edit photos with vanilla JavaScript</p>
+    </header>
+    <div class="container">
+        <div class="preview">
+            <canvas id="canvas" hidden></canvas>
+            <input type="file" name="image" id="input-file" />
+
+        </div>
+        <div class="controls">
+            <div class="adjust">
+                <div class="range-box">
+                    <label for="brightness">Brightness <span id="brightness-value">100%</span></label>
+                    <input type="range" class="range" name="brightness" id="brightness" min="0" max="200" step="1" />
+                </div>
+                <div class="range-box">
+                    <label for="contrast">Contrast <span id="contrast-value">100%</span></label>
+                    <input type="range" class="range" name="contrast" id="contrast" min="0" max="200" step="1" />
+                </div>
+                <div class="range-box">
+                    <label for="saturate">Saturate <span id="saturate-value">100%</span></label>
+                    <input type="range" class="range" name="saturate" id="saturate" min="0" max="200" step="1" />
+                </div>
+                <div class="range-box">
+                    <label for="sepia">Sepia <span id="sepia-value">0%</span></label>
+                    <input type="range" class="range" name="sepia" id="sepia" />
+                </div>
+                <div class="range-box">
+                    <label for="blur">Blur <span id="blur-value">0px</span></label>
+                    <input type="range" class="range" name="blur" id="blur" />
+                </div>
+                <div class="range-box">
+                    <label for="hue">hue <span id="hue-value">0deg</span></label>
+                    <input type="range" class="range" name="hue" id="hue" min="0" max="360" />
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="reset-button">Reset</button>
+                <button id="download-button">Download</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- <p>Made by Keshav</p> -->
+        <a href="https://github.com/kecav/photofy" target="_blank">Fork on GitHub</a>
+    </footer>
+</body>
+
+</html>
